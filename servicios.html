@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Servicios - Centro de Salud 11 de Febrero</title>
+  <link rel="stylesheet" href="css/servicios.css">
+</head>
+<body>
+
+<header>
+  <h1>Centro de Salud 11 de Febrero</h1>
+</header>
+
+<main>
+  <h2>Servicios</h2>
+
+  <div class="servicio">
+    <div class="servicio-info">
+      <div>
+        <h3>Servicio de enfermería</h3>
+        <p>Horario de atención: <strong>8 a 16 hs</strong></p>
+      </div>
+      <button class="ver-btn" onclick="mostrarInfo('enfermeria')">Ver personal</button>
+    </div>
+    <div id="enfermeria" class="info-oculta">
+      <p><strong>Enfermeros/as:</strong> Laura Pérez, Martín Gómez</p>
+      <p><strong>Días:</strong> Lunes a Viernes</p>
+      <p><strong>Horario:</strong> 8 a 16 hs</p>
+    </div>
+  </div>
+
+  <div class="servicio">
+    <div class="servicio-info">
+      <div>
+        <h3>Vacunación (Calendario Nacional de Vacunas)</h3>
+        <p>Horario de atención: <strong>8 a 15 hs</strong></p>
+      </div>
+      <button class="ver-btn" onclick="mostrarInfo('vacunacion')">Ver personal</button>
+    </div>
+    <div id="vacunacion" class="info-oculta">
+      <p><strong>Enfermeras:</strong> Paula Díaz, Romina López</p>
+      <p><strong>Días:</strong> Lunes a Viernes</p>
+      <p><strong>Horario:</strong> 8 a 15 hs</p>
+    </div>
+  </div>
+
+  <div class="servicio">
+    <div class="servicio-info">
+      <div>
+        <h3>Vacunación del virus sincicial respiratorio</h3>
+        <p>Para embarazadas entre <strong>32 y 36 semanas de gestación</strong>.</p>
+      </div>
+      <button class="ver-btn" onclick="mostrarInfo('sincicial')">Ver personal</button>
+    </div>
+    <div id="sincicial" class="info-oculta">
+      <p><strong>Encargada:</strong> Dra. Fernanda Ruiz</p>
+      <p><strong>Días:</strong> Martes y Jueves</p>
+      <p><strong>Horario:</strong> 9 a 13 hs</p>
+    </div>
+  </div>
+
+  <div class="servicio">
+    <div class="servicio-info">
+      <div>
+        <h3>Servicio de obstetricia</h3>
+        <p>Atención integral a embarazadas y controles prenatales.</p>
+      </div>
+      <button class="ver-btn" onclick="mostrarInfo('obstetricia')">Ver personal</button>
+    </div>
+    <div id="obstetricia" class="info-oculta">
+      <p><strong>Profesionales:</strong> Lic. Carla Romero</p>
+      <p><strong>Días:</strong> Lunes, Miércoles y Viernes</p>
+      <p><strong>Horario:</strong> 8 a 14 hs</p>
+    </div>
+  </div>
+
+  <div class="servicio">
+    <div class="servicio-info">
+      <div>
+        <h3>Servicio de trabajo social</h3>
+        <p>Asistencia y orientación social para familias y pacientes.</p>
+      </div>
+      <button class="ver-btn" onclick="mostrarInfo('trabajosocial')">Ver personal</button>
+    </div>
+    <div id="trabajosocial" class="info-oculta">
+      <p><strong>Trabajadora social:</strong> María Torres</p>
+      <p><strong>Días:</strong> Martes y Jueves</p>
+      <p><strong>Horario:</strong> 9 a 15 hs</p>
+    </div>
+  </div>
+
+  <div class="servicio">
+    <div class="servicio-info">
+      <div>
+        <h3>Servicio de neumonología</h3>
+        <p>Atención y seguimiento de enfermedades respiratorias.</p>
+      </div>
+      <button class="ver-btn" onclick="mostrarInfo('neumonologia')">Ver personal</button>
+    </div>
+    <div id="neumonologia" class="info-oculta">
+      <p><strong>Médico neumonólogo:</strong> Dr. Pablo Fernández</p>
+      <p><strong>Días:</strong> Lunes y Miércoles</p>
+      <p><strong>Horario:</strong> 10 a 16 hs</p>
+    </div>
+  </div>
+
+</main>
+
+<div class="backtohome">
+  <a href="index.html">IR A INICIO</a>
+</div>
+
+<footer class="footer">
+  <p>Luhana Micol Pera</p>
+  <p>E.E.S.T. N°1</p>
+  <p>2025 Unidad funcional 11 de febrero. Todos los derechos reservados.</p>
+</footer>
+
+<script>
+  function mostrarInfo(id) {
+    const elemento = document.getElementById(id);
+    elemento.classList.toggle("visible");
+  }
+</script>
+
+</body>
+</html>
