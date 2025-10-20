@@ -11,9 +11,6 @@ body {
     box-sizing: border-box; 
 }  
 
-
-
-
 .exampletwo h1 {  
     text-align: center;   
     font-size: 2.5em;   
@@ -22,14 +19,13 @@ body {
     padding: 20px 0;
     margin: 0;
 }  
- 
+
 .formatcontact h2 {  
     text-align: center;   
     font-size: 1.8em;   
     color: #2D2D5C;  
     margin: 20px 0;  
 }  
-
 
 .tabla-contacto {
     width: 85%;
@@ -79,7 +75,6 @@ body {
 .tabla-contacto a:hover {
     text-decoration: underline;
 }
-
 
 .form-container {
     width: 80%;
@@ -138,6 +133,7 @@ form input[type="submit"] {
 form input[type="submit"]:hover {
     background-color: #1f5f8c;
 }
+
 .footer {  
     text-align: center;  
     padding: 20px;  
@@ -165,3 +161,73 @@ form input[type="submit"]:hover {
 .backtohome a:hover {
     background-color: #141A4C;
 }
+
+
+@media (max-width: 1024px) {
+    .tabla-contacto {
+        width: 95%;
+    }
+    .form-container {
+        width: 90%;
+        padding: 20px;
+    }
+    .exampletwo h1 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 0.95em;
+    }
+    .tabla-contacto th, .tabla-contacto td {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+    .form-container {
+        width: 95%;
+        margin: 20px auto;
+    }
+    form input[type="submit"] {
+        width: 100%;
+    }
+    .backtohome {
+        text-align: center;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .exampletwo h1 {
+        font-size: 1.6em;
+        padding: 15px 0;
+    }
+    .formatcontact h2 {
+        font-size: 1.3em;
+    }
+    .tabla-contacto, 
+    .form-container {
+        width: 100%;
+        margin: 10px auto;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    .tabla-contacto th, .tabla-contacto td {
+        font-size: 0.85em;
+        padding: 8px;
+    }
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        font-size: 0.9em;
+    }
+    .footer {
+        font-size: 0.9em;
+        padding: 15px;
+    }
+    .backtohome a {
+        padding: 8px 15px;
+        font-size: 0.9em;
+    }
+}
+
