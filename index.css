@@ -1,73 +1,73 @@
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {  
     font-family: Arial, sans-serif;  
-    margin: 0;  
-    padding: 0;  
-    background-color:#F8F8FF;  
-}  
+    background-color: #F8F8FF;  
+    color: #333;
+    line-height: 1.6;
+}
 
-* {  
-    margin: 0;  
-    padding: 0;  
-    box-sizing: border-box;  
-}  
+.section-1, .section-2, .section-3 {
+    margin: 0;
+}
 
-.section-1, .section-2, .section-3 {  
-    margin: 0rem;  
-}  
+.margin {
+    width: 100%;
+    height: 100vh;
+}
 
-.margin {  
-    width: 100%;  
-    height: 100vh;  
-}  
-
+/* ==== ENCABEZADO ==== */
 .section-1 {  
     width: 100%;  
-    height: 8em;  
-    background: linear-gradient(90deg,#092b7a,#034F3B);  
-    padding-top: 1.5em;  
+    height: auto;  
+    background: linear-gradient(90deg, #092b7a, #034F3B);  
+    padding: 1em 0;  
 }  
 
 .header {  
-    background-color:linear-gradient(90deg,#092b7a,#034F3B);
     width: 100%;  
-    height: 3.5em;  
     display: flex;  
     flex-direction: row;  
-    overflow: hidden;  
-    justify-content: left;  
-    align-items: left;  
+    justify-content: space-between;  
+    align-items: center;  
+    padding: 0 20px;
 }  
 
 .img {  
-    width: 25%;  
-    height: 100%;  
+    width: 120px;  
+}
+
+.img img {  
+    width: 100%;  
+    height: auto;  
+    object-fit: contain;  
 }  
 
 .menu {  
-    width: 70%;  
-    height: 100%;  
     display: flex;  
     flex-direction: row;  
     justify-content: flex-end; 
     align-items: center; 
-}  
-
-.img img {  
-    object-fit: cover;  
-    height: 100%;  
+    flex-wrap: wrap;
 }  
 
 .menu a {  
-    display: flex;  
     text-decoration: none;  
     color: #FBFCFC;  
-    padding: 2em 1em;  
+    padding: 1em;  
+    transition: background-color 0.3s ease;
 }  
 
 .menu a:hover {  
     background-color: #282859;  
+    border-radius: 5px;
 }  
+
 
 .section-2 {  
     padding: 20px;  
@@ -75,12 +75,13 @@ body {
     border-radius: 10px;  
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);  
     max-width: 1200px;   
-    margin: auto;   
+    margin: 20px auto;   
 }  
 
 .s2-header h1 {  
     color: #2c3e50;   
     text-align: center;   
+    margin-bottom: 20px;
 }  
 
 .tabla-especialidades {
@@ -117,7 +118,6 @@ body {
     color: #34495e;
 }
 
-
 .video-container {  
     text-align: center;  
     margin-top: 20px;  
@@ -126,8 +126,8 @@ body {
 video {
     width: 100%;
     max-width: 600px; 
+    border-radius: 10px;
 }
-  
 
 .galeria {  
     margin: 20px 0;  
@@ -156,6 +156,7 @@ video {
 .especialidades h2 {  
     text-align: center;  
     color: #34495e;  
+    margin-bottom: 15px;
 }  
 
 .especialidades ul {  
@@ -165,24 +166,16 @@ video {
 }  
 
 .especialidades li {  
-    background-color:#FAFAF9;   
+    background-color: #FAFAF9;   
     border: 1px solid #ccc;  
     border-radius: 5px;  
     padding: 15px;  
     margin: 10px 0;  
 }   
 
-.footer {  
-    text-align: center;  
-    padding: 20px;  
-    background-color: #2c3e50;  
-    color: #fff;  
-    margin-top: 10px;  
-    border-radius: 8px;  
-}
 .backtohome {
     text-align: left;
-    margin-bottom: 30px;
+    margin: 30px 20px;
 }
 
 .backtohome a {
@@ -193,8 +186,64 @@ video {
     border-radius: 6px;
     text-decoration: none;
     font-weight: bold;
+    transition: background-color 0.3s;
 }
 
 .backtohome a:hover {
     background-color: #1f5f8c;
+}
+
+.footer {  
+    text-align: center;  
+    padding: 20px;  
+    background-color: #2c3e50;  
+    color: #fff;  
+    margin-top: 20px;  
+    border-radius: 8px;  
+}
+
+@media (max-width: 768px) {
+
+    .header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu a {
+        padding: 10px;
+        width: 100%;
+        border-top: 1px solid rgba(255,255,255,0.2);
+    }
+
+    .tabla-especialidades th,
+    .tabla-especialidades td {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    video {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .s2-header h1 {
+        font-size: 1.5em;
+    }
+
+    .especialidades li {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .footer {
+        font-size: 14px;
+        padding: 15px;
+    }
 }
