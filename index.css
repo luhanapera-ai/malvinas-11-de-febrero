@@ -9,11 +9,11 @@ body {
     font-family: Arial, sans-serif;
     background-color: #F8F8FF;
     color: #2c3e50;
+    line-height: 1.6;
 }
 
 .section-1 {
     width: 100%;
-    height: 8em;
     background: linear-gradient(90deg,#092b7a,#034F3B);
 }
 
@@ -21,22 +21,24 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    height: 100%;
+    padding: 10px 20px;
+    flex-wrap: wrap;
 }
 
 .img {
-    height: 100%;
+    width: 25%;
 }
 
 .img img {
-    height: 100%;
+    width: 100%;
+    height: auto;
     object-fit: contain;
 }
 
 .menu {
     display: flex;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 .menu a {
@@ -51,7 +53,6 @@ body {
     background-color: #282859;
 }
 
-/* VIDEO */
 .video-container {
     text-align: center;
     margin: 20px 0;
@@ -63,9 +64,13 @@ video {
     border-radius: 10px;
 }
 
-/* GALERÍA */
 .galeria {
     margin: 20px 0;
+}
+
+.galeria h2 {
+    text-align: center;
+    margin-bottom: 15px;
 }
 
 .imagenes {
@@ -124,6 +129,30 @@ video {
 .tabla-especialidades td:first-child {
     font-weight: bold;
     color: #34495e;
+}
+
+@media (max-width: 768px) {
+    .tabla-especialidades, .tabla-especialidades thead, .tabla-especialidades tbody, 
+    .tabla-especialidades th, .tabla-especialidades td, .tabla-especialidades tr {
+        display: block;
+        width: 100%;
+    }
+    .tabla-especialidades thead tr {
+        display: none;
+    }
+    .tabla-especialidades td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    .tabla-especialidades td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: calc(50% - 20px);
+        text-align: left;
+        font-weight: bold;
+    }
 }
 
 .backtohome {
@@ -193,44 +222,20 @@ video {
 }
 
 @media (max-width: 1024px) {
-    .menu {
-        gap: 5px;
-    }
     .menu a {
         padding: 8px 12px;
     }
 }
 
-@media (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 10px;
-        padding: 10px 20px;
-    }
-
-    .menu {
-        flex-direction: column;
-        width: 100%;
-        align-items: flex-start;
-    }
-
-    .imagenes {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    }
-
-    video {
-        width: 100%;
-    }
-
-    .tabla-especialidades {
+@media (max-width: 480px) {
+    .menu a {
+        padding: 6px 10px;
         font-size: 14px;
     }
-}
-
-@media (max-width: 480px) {
-    .tabla-especialidades th, .tabla-especialidades td {
-        padding: 8px;
-        font-size: 12px;
+    .s2-header h1 {
+        font-size: 20px;
+    }
+    .imagenes {
+        grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
     }
 }
