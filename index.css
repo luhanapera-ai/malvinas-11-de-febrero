@@ -11,7 +11,6 @@ body {
     line-height: 1.6;
 }
 
-/* ==== SECCIONES ==== */
 .section-1, .section-2, .section-3 {
     margin: 0;
 }
@@ -21,7 +20,6 @@ body {
     min-height: 100vh;
 }
 
-/* ==== ENCABEZADO ==== */
 .section-1 {  
     width: 100%;  
     background: linear-gradient(90deg, #092b7a, #034F3B);  
@@ -37,13 +35,11 @@ body {
     align-items: center;
 }
 
-/* ==== LOGO ==== */
 .header img {
     max-width: 150px;
     height: auto;
 }
 
-/* ==== NAVEGACIÓN ==== */
 .nav {
     display: flex;
     gap: 1.5em;
@@ -59,14 +55,12 @@ body {
     text-decoration: underline;
 }
 
-/* ==== CONTENIDO GENERAL ==== */
 .section-2, .section-3 {
     width: 90%;
     margin: 2em auto;
     text-align: center;
 }
 
-/* ==== ADAPTACIÓN A PANTALLAS PEQUEÑAS ==== */
 @media (max-width: 768px) {
     .header {
         flex-direction: column;
@@ -90,7 +84,6 @@ body {
     }
 }
 
-/* ==== ADAPTACIÓN A PANTALLAS MUY PEQUEÑAS (CELULARES) ==== */
 @media (max-width: 480px) {
     body {
         font-size: 14px;
