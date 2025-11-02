@@ -26,7 +26,7 @@ body {
 
 .menu a {
   text-decoration: none;
-  color: #FBFCFC;
+  color: #092b7a;
   padding: 0.5em 1em;
   background-color: #092b7a;
   border-radius: 5px;
@@ -153,5 +153,6 @@ video { width: 100%; max-width: 600px; }
   .img { width: 100px; }
   .menu a { padding: 0.4em 0.6em; font-size: 12px; }
 }
+
 
 
