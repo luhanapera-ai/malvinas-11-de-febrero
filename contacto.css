@@ -27,7 +27,6 @@ body {
     margin: 20px 0;  
 }  
 
-
 .tabla-contacto {
     width: 85%;
     margin: 25px auto;
@@ -65,6 +64,7 @@ body {
     vertical-align: middle;
     margin-right: 8px;
     display: inline-block;
+    max-width: 40px;
 }
 
 .tabla-contacto a {
@@ -76,7 +76,6 @@ body {
 .tabla-contacto a:hover {
     text-decoration: underline;
 }
-
 
 .form-container {
     width: 80%;
@@ -135,6 +134,7 @@ form input[type="submit"] {
 form input[type="submit"]:hover {
     background-color: #1f5f8c;
 }
+
 .footer {  
     text-align: center;  
     padding: 20px;  
@@ -162,3 +162,46 @@ form input[type="submit"]:hover {
 .backtohome a:hover {
     background-color: #141A4C;
 }
+
+@media (max-width: 1024px) {
+    .tabla-contacto {
+        width: 95%;
+    }
+
+    .form-container {
+        width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .exampletwo h1 {
+        font-size: 2em;
+        padding: 15px 0;
+    }
+
+    .formatcontact h2 {
+        font-size: 1.5em;
+    }
+
+    .tabla-contacto th, 
+    .tabla-contacto td {
+        font-size: 0.95em;
+        padding: 10px;
+    }
+
+    form input[type="submit"] {
+        width: 100%;
+        padding: 14px;
+    }
+
+    .backtohome {
+        text-align: center;
+        margin: 20px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .exampletwo h1 {
+        font-size: 1.6em;
+        pa
+
