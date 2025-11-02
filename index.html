@@ -1,139 +1,182 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Unidad funcional 11 de febrero</title>
-<link rel="stylesheet" href="index.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <title>Unidad funcional 11 de febrero</title>
+  <style>
 
-<script>
-  const password = "1234"; 
-
-  function validarPassword(event) {
-    event.preventDefault();
-    const input = document.getElementById("pass").value;
-    const errorMsg = document.getElementById("errorMsg");
-
-    if (input === password) {
-      document.getElementById("loginForm").style.display = "none";
-      document.getElementById("contenido").style.display = "block";
-    } else {
-      errorMsg.textContent = "Contraseña incorrecta. Intenta de nuevo.";
+    #loginForm {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #F8F8FF;
     }
-  }
-</script>
-</head>
 
+    #loginForm input[type="password"],
+    #loginForm input[type="submit"] {
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    #loginForm input[type="password"] {
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+    }
+
+    #loginForm input[type="submit"] {
+      padding: 10px 20px;
+      background-color: #2D2D5C;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+
+    #loginForm input[type="submit"]:hover {
+      background-color: #1f5f8c;
+    }
+
+    #errorMsg {
+      color: red;
+      margin-top: 10px;
+    }
+
+    #contenido {
+      display: none;
+    }
+  </style>
+  <script>
+    const password = "1234";
+
+    function validarPassword(event) {
+      event.preventDefault();
+      const input = document.getElementById("pass").value;
+      const errorMsg = document.getElementById("errorMsg");
+
+      if (input === password) {
+        document.getElementById("loginForm").style.display = "none";
+        document.getElementById("contenido").style.display = "block";
+      } else {
+        errorMsg.textContent = "Contraseña incorrecta. Intenta de nuevo.";
+      }
+    }
+  </script>
+</head>
 <body>
 
-<div id="loginForm">
-  <h2>Ingrese la contraseña para acceder</h2>
-  <form onsubmit="validarPassword(event)">
-    <input type="password" id="pass" placeholder="Contraseña" required>
-    <input type="submit" value="Entrar">
-    <div id="errorMsg"></div>
-  </form>
-</div>
-
-<div id="contenido">
-<main class="main">
-
-  <section class="contenedor section-1">
-    <header class="header">
-      <div class="img">
-        <img src="logo4.jpg" alt="Logo de Unidad funcional 11 de febrero">
-      </div>
-      <nav class="menu">
-        <a href="funciones.html">Funciones</a>
-        <a href="Contacto.html">Contacto</a>
-        <a href="direccion.html">Dirección</a>
-        <a href="servicios.html">Servicios</a>
-      </nav>
-    </header>
-  </section>
-
-  <section class="contenedor section-2">
-    <div class="s2-header">
-      <h1>Unidad funcional 11 de febrero</h1>
-    </div>
-
-    <div class="video-container">
-      <h2>Conoce nuestras instalaciones</h2>
-      <video controls>
-        <source src="video11febrero.mp4" type="video/mp4">
-      </video>
-    </div>
-
-    <div class="galeria">
-      <h2>Galería de Imágenes</h2>
-      <div class="imagenes">
-        <img src="frentedelcentro.jpeg" alt="Frente del centro de salud">
-        <img src="dentrodelcentro.jpg" alt="Interior del centro de salud">
-        <img src="pasillodelcentro.jpeg" alt="Pasillo del centro de salud">
-        <img src="consultorio.jpg" alt="Consultorio del centro de salud">
-        <img src="11defebrero.jpg" alt="Evento en el centro de salud">
-      </div>
-    </div>
-
-    <div class="especialidades">
-      <h2>Especialidades</h2>
-      <div class="tabla-container">
-        <table class="tabla-especialidades">
-          <thead>
-            <tr>
-              <th>Especialidad</th>
-              <th>Descripción</th>
-              <th>Historia</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Enfermería</td>
-              <td>Profesión de atención médica que se centra en el cuidado integral de las personas...</td>
-              <td>Desde sus orígenes en cuidados comunitarios hasta convertirse en disciplina autónoma...</td>
-            </tr>
-            <tr>
-              <td>Odontología</td>
-              <td>Prevención, diagnóstico y tratamiento de enfermedades bucodentales...</td>
-              <td>Desde prácticas antiguas hasta la odontología moderna basada en la evidencia...</td>
-            </tr>
-            <tr>
-              <td>Pediatría</td>
-              <td>Atención integral de la salud de niños y adolescentes...</td>
-              <td>De cuidados familiares antiguos a especialidad médica formal...</td>
-            </tr>
-            <tr>
-              <td>Ginecología</td>
-              <td>Salud del sistema reproductivo femenino...</td>
-              <td>De prácticas empíricas a disciplina médica avanzada...</td>
-            </tr>
-            <tr>
-              <td>Obstetricia</td>
-              <td>Atención del embarazo, parto y posparto...</td>
-              <td>De prácticas tradicionales a medicina maternoinfantil moderna...</td>
-            </tr>
-            <tr>
-              <td>Psicología</td>
-              <td>Estudia el comportamiento y procesos mentales...</td>
-              <td>De la filosofía a la ciencia moderna del bienestar humano...</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </div>
-  </section>
-
-  <div class="backtohome">
-    <a href="index.html">IR A INICIO</a>
+  <div id="loginForm">
+    <h2>Ingrese la contraseña para acceder</h2>
+    <form onsubmit="validarPassword(event)">
+      <input type="password" id="pass" placeholder="Contraseña" required>
+      <input type="submit" value="Entrar">
+      <div id="errorMsg"></div>
+    </form>
   </div>
 
-  <footer class="footer">
-    <p>Luhana Micol Pera</p>
-    <p>E.E.S.T. N°1</p>
-    <p>2025 Unidad funcional 11 de febrero. Todos los derechos reservados.</p>
-  </footer>
-</main>
-</div>
+  <div id="contenido">
+    <main class="main">
+
+      <section class="contenedor section-1">
+        <header class="header">
+          <div class="img">
+            <img src="logo4.jpg" alt="Logo de Unidad funcional 11 de febrero">
+          </div>
+          <nav class="menu">
+            <a href="funciones.html">Funciones</a>
+            <a href="Contacto.html">Contacto</a>
+            <a href="direccion.html">Dirección</a>
+            <a href="servicios.html">Servicios</a>
+          </nav>
+        </header>
+      </section>
+
+      <section class="contenedor section-2">
+
+        <div class="s2-header">
+          <h1>Unidad funcional 11 de febrero</h1>
+        </div>
+
+        <div class="video-container">
+          <h2>Conoce nuestras instalaciones</h2>
+          <video controls>
+            <source src="video11febrero.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="galeria">
+          <h2>Galería de Imágenes</h2>
+          <div class="imagenes">
+            <img src="frentedelcentro.jpeg" alt="Frente del centro de salud">
+            <img src="dentrodelcentro.jpg" alt="Interior del centro de salud">
+            <img src="pasillodelcentro.jpeg" alt="Pasillo del centro de salud">
+            <img src="consultorio.jpg" alt="Consultorio del centro de salud">
+            <img src="11defebrero.jpg" alt="Evento en el centro de salud">
+          </div>
+        </div>
+
+        <div class="especialidades">
+          <h2>Especialidades</h2>
+          <table class="tabla-especialidades">
+            <thead>
+              <tr>
+                <th>Especialidad</th>
+                <th>Descripción</th>
+                <th>Historia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td data-label="Especialidad">Enfermería</td>
+                <td data-label="Descripción">La enfermería es la profesión de cuidado de la salud centrada en promover, mantener y restaurar la salud, acompañar a pacientes y comunidades, coordinar cuidados, administrar tratamientos y apoyar la educación y la autonomía de las personas.</td>
+                <td data-label="Historia">Su historia se remonta a figuras y prácticas de cuidado comunitario en la antigüedad, con consolidación como profesión durante el siglo XIX, avances en teoría del cuidado, higiene, epidemiología y prácticas clínicas, y un crecimiento hacia la especialización, investigación y atención basada en evidencia en la actualidad.</td>
+              </tr>
+              <tr>
+                <td data-label="Especialidad">Odontología</td>
+                <td data-label="Descripción">La odontología es la ciencia de la salud bucal que se ocupa de la prevención, diagnóstico y tratamiento de las enfermedades de los dientes, encías y estructuras relacionadas, buscando la salud oral, la función masticatoria y la estética, y promoviendo hábitos de higiene bucal a lo largo de la vida.</td>
+                <td data-label="Historia">Su trayectoria va desde prácticas rudimentarias en civilizaciones antiguas hasta la odontología moderna, con avances en anestesia dental, radiografía, desarrollo de materiales dentales, técnicas restaurativas y enfoques interdisciplinarios para la salud oral y la odontología preventiva.</td>
+              </tr>
+              <tr>
+                <td data-label="Especialidad">Pediatría</td>
+                <td data-label="Descripción">La pediatría es la especialidad médica que se ocupa de la salud de los niños desde el nacimiento hasta la adolescencia, abarcando vigilancia del crecimiento y desarrollo, vacunas, prevención, diagnóstico y manejo de enfermedades infantiles, y asesoramiento a familias para promover un desarrollo sano.</td>
+                <td data-label="Historia">Su desarrollo ha ido desde el cuidado comunitario de los niños en sociedades antiguas hacia una especialidad médica reconocida en los siglos XIX y XX, con avances en medicina preventiva, neonatología, vacunas, y estrategias de manejo de enfermedades comunes y crónicas en la infancia, además de un enfoque actual en la medicina basada en evidencia y el cuidado centrado en la familia.</td>
+              </tr>
+              <tr>
+                <td data-label="Especialidad">Ginecología</td>
+                <td data-label="Descripción">La ginecología es la rama de la medicina que se ocupa de la salud del aparato reproductor femenino y de la sexualidad, abarcando la prevención, el diagnóstico y el tratamiento de enfermedades ginecológicas, la salud sexual y la planificación familiar, así como el manejo de la salud materna durante el embarazo en colaboración con obstetras.</td>
+                <td data-label="Historia">Históricamente ha evolucionado desde prácticas y saberes antiguos sobre la salud femenina y la reproducción, con avances significativos en anatomía y endocrinología en los siglos XIX y XX, la introducción de métodos anticonceptivos modernos, pruebas de detección y tratamientos para cáncer ginecológico, y enfoques contemporáneos centrados en la salud integral y la equidad de género.</td>
+              </tr>
+              <tr>
+                <td data-label="Especialidad">Obstetricia</td>
+                <td data-label="Descripción">La obstetricia es la ciencia de la salud y la profesión dedicadas al cuidado de la mujer durante el embarazo, parto y posparto, con el objetivo de asegurar la salud materna e infantil mediante la atención prenatal, la gestión del parto, el cuidado del recién nacido y el manejo de complicaciones obstétricas, apoyada por equipos multidisciplinarios.</td>
+                <td data-label="Historia">históricamente ha atravesado un desarrollo que va desde prácticas y roles de parteras en culturas antiguas, pasando por avances en anatomía, asepsia y herramientas obstétricas en la Edad Moderna, hasta una obstetricia moderna, basada en la evidencia, que integra tecnología como ecografías y monitorización fetal para un manejo seguro y respetuoso del parto, adaptándose a las necesidades de cada contexto y a la atención de embarazos de alto riesgo.</td>
+              </tr>
+              <tr>
+                <td data-label="Especialidad">Psicología</td>
+                <td data-label="Descripción">La psicología es la ciencia que estudia la mente y el comportamiento humano, analizando los procesos mentales (como el pensamiento, las emociones y la memoria), la conducta, las interacciones sociales y las experiencias individuales y grupales.</td>
+                <td data-label="Historia">La historia de la psicología se remonta a la filosofía antigua, pero se formalizó como ciencia en 1879 con la fundación del primer laboratorio de psicología experimental por Wilhelm Wundt en Leipzig.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </section>
+
+      <div class="backtohome">
+        <a href="index.html">IR A INICIO</a>
+      </div>
+
+      <footer class="footer">
+        <p>Luhana Micol Pera</p>
+        <p>E.E.S.T. N°1</p>
+        <p>2025 Unidad funcional 11 de febrero. Todos los derechos reservados.</p>
+      </footer>
+
+    </main>
+  </div>
 
 </body>
 </html>
