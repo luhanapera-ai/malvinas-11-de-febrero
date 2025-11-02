@@ -165,7 +165,7 @@ form input[type="submit"]:hover {
     background-color: #141A4C;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
 
     .exampletwo h1 {
         font-size: 2em;
@@ -267,3 +267,4 @@ form input[type="submit"]:hover {
         padding: 10px;
     }
 }
+
