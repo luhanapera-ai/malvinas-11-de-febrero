@@ -32,7 +32,7 @@ body {
 }
 
 .tabla-contacto {
-  width: 85%;
+  width: 95%;
   margin: 25px auto;
   border-collapse: collapse;
   background-color: #fff;
@@ -241,3 +241,4 @@ form input[type="submit"]:hover {
     padding: 10px;
   }
 }
+
