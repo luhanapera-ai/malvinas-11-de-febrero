@@ -103,7 +103,7 @@ form input[type="text"],
 form input[type="email"],
 form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
     border-radius: 6px;
     margin-bottom: 15px;
@@ -124,11 +124,13 @@ form input[type="submit"] {
     color: white;
     font-weight: bold;
     border: none;
-    padding: 12px 25px;
+    padding: 14px 0;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1.05em;
+    width: 60%;
     margin: 0 auto;
+    transition: background-color 0.3s ease;
 }
 
 form input[type="submit"]:hover {
@@ -163,45 +165,105 @@ form input[type="submit"]:hover {
     background-color: #141A4C;
 }
 
-@media (max-width: 1024px) {
-    .tabla-contacto {
-        width: 95%;
-    }
-
-    .form-container {
-        width: 90%;
-    }
-}
-
 @media (max-width: 768px) {
+
     .exampletwo h1 {
         font-size: 2em;
         padding: 15px 0;
     }
 
     .formatcontact h2 {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 
-    .tabla-contacto th, 
-    .tabla-contacto td {
+    .tabla-contacto {
+        width: 95%;
         font-size: 0.95em;
+    }
+
+    .form-container {
+        width: 90%;
+        padding: 20px;
+    }
+
+    form label {
+        font-size: 0.95em;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        font-size: 1em;
         padding: 10px;
     }
 
     form input[type="submit"] {
         width: 100%;
-        padding: 14px;
+        font-size: 1em;
     }
 
     .backtohome {
         text-align: center;
         margin: 20px 0;
     }
+
+    .footer {
+        font-size: 0.9em;
+        padding: 15px;
+    }
 }
 
 @media (max-width: 480px) {
+
     .exampletwo h1 {
         font-size: 1.6em;
-        pa
+        padding: 10px 0;
+    }
 
+    .formatcontact h2 {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+
+    .form-container {
+        width: 95%;
+        padding: 15px;
+        box-shadow: none;
+    }
+
+    form label {
+        font-size: 0.9em;
+    }
+
+    form input[type="text"],
+    form input[type="email"],
+    form textarea {
+        font-size: 0.9em;
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+    form input[type="submit"] {
+        width: 100%;
+        font-size: 1em;
+        padding: 12px;
+        border-radius: 6px;
+    }
+
+    .tabla-contacto {
+        width: 100%;
+        font-size: 0.85em;
+        border: none;
+        box-shadow: none;
+    }
+
+    .tabla-contacto th, 
+    .tabla-contacto td {
+        padding: 8px;
+    }
+
+    .footer {
+        font-size: 0.85em;
+        padding: 10px;
+    }
+}
