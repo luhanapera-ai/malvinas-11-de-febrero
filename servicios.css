@@ -63,7 +63,7 @@ h2 {
 
 .info-oculta {
   display: none;
-  background-color: #092b7a;
+  background-color: #white;
   border-left: 4px solid #004d73;
   padding: 10px 15px;
   margin-top: 10px;
@@ -185,4 +185,5 @@ footer {
     padding: 8px 15px;
   }
 }
+
 
