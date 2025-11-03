@@ -6,77 +6,6 @@
   <link rel="stylesheet" href="index.css">
   <title>Unidad funcional 11 de febrero</title>
   <style>
-
-    #loginForm {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-color: #F8F8FF;
-    }
-
-    #loginForm input[type="password"],
-    #loginForm input[type="submit"] {
-      border-radius: 5px;
-      font-size: 16px;
-    }
-
-    #loginForm input[type="password"] {
-      padding: 10px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-    }
-
-    #loginForm input[type="submit"] {
-      padding: 10px 20px;
-      background-color: #2D2D5C;
-      color: white;
-      border: none;
-      cursor: pointer;
-    }
-
-    #loginForm input[type="submit"]:hover {
-      background-color: #1f5f8c;
-    }
-
-    #errorMsg {
-      color: red;
-      margin-top: 10px;
-    }
-
-    #contenido {
-      display: none;
-    }
-  </style>
-  <script>
-    const password = "1234";
-
-    function validarPassword(event) {
-      event.preventDefault();
-      const input = document.getElementById("pass").value;
-      const errorMsg = document.getElementById("errorMsg");
-
-      if (input === password) {
-        document.getElementById("loginForm").style.display = "none";
-        document.getElementById("contenido").style.display = "block";
-      } else {
-        errorMsg.textContent = "Contraseña incorrecta. Intenta de nuevo.";
-      }
-    }
-  </script>
-</head>
-<body>
-
-  <div id="loginForm">
-    <h2>Ingrese la contraseña para acceder</h2>
-    <form onsubmit="validarPassword(event)">
-      <input type="password" id="pass" placeholder="Contraseña" required>
-      <input type="submit" value="Entrar">
-      <div id="errorMsg"></div>
-    </form>
-  </div>
-
   <div id="contenido">
     <main class="main">
 
@@ -178,6 +107,7 @@
 
 </body>
 </html>
+
 
 
 
