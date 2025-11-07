@@ -1,163 +1,195 @@
-body, h1, h2, p, img {  
-    margin: 0;  
-    padding: 0;  
-}  
-
-body {  
-    font-family: Arial, sans-serif;   
-    line-height: 1.6;  
-    background-color: #F9FAFB;
-    color: #333;   
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 10px;
-}  
-
-.exampletwo h1 {  
-    text-align: center;  
-    font-size: 2.5em;   
-    color: #F9FAFB;  
-    background-color: #2D2D5C;
-    padding: 20px 0;
-    margin: 0;
-}  
-
-.formatcontact h2 {  
-    text-align: left;  
-    font-size: 1.8em;  
-    color: #11115C;   
-    margin: 20px 0 10px 20px;  
-}  
-
-.tabla-funciones {
-    width: 95%;
-    margin: 20px auto;
-    border-collapse: collapse;
-    background-color: #ffffff;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    overflow: hidden;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.tabla-funciones th, 
+body, h1, h2, p, img {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #F9FAFB;
+  color: #333;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.exampletwo h1 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #F9FAFB;
+  background-color: #2D2D5C;
+  padding: 20px 0;
+  margin: 0;
+}
+
+.formatcontact h2 {
+  text-align: left;
+  font-size: 1.8em;
+  color: #11115C;
+  margin: 20px 0 10px 20px;
+}
+
+.tabla-container {
+  width: 80%;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  overflow-x: auto;
+}
+
+.tabla-funciones {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.tabla-funciones th,
 .tabla-funciones td {
-    border: 1px solid #ddd;
-    padding: 12px 15px;
-    text-align: left;
-    vertical-align: top;
+  border: 1px solid #ddd;
+  padding: 12px 15px;
+  vertical-align: middle;
+  text-align: left;
 }
 
 .tabla-funciones th {
-    background-color: #2D2D5C;
-    color: white;
-    text-align: center;
-    font-size: 1.1em;
+  background-color: #2D2D5C;
+  color: #fff;
+  text-align: center;
+  font-size: 1.05em;
 }
 
 .tabla-funciones tr:nth-child(even) {
-    background-color: #f2f6fa;
+  background-color: #f2f6fa;
 }
 
 .tabla-funciones tr:hover {
-    background-color: #e8f0fe;
-}
-
-.footer {  
-    text-align: center;  
-    padding: 20px;  
-    background-color: #2c3e50;  
-    color: #fff;  
-    margin-top: 10px;  
-    border-radius: 8px;  
+  background-color: #e8f0fe;
 }
 
 .backtohome {
-    text-align: left;
-    margin-bottom: 30px;
+  text-align: center;
+  margin: 30px 0;
 }
 
 .backtohome a {
-    display: inline-block;
-    background-color: #2D2D5C;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 6px;
-    text-decoration: none;
-    font-weight: bold;
+  display: inline-block;
+  background-color: #2D2D5C;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
 .backtohome a:hover {
-    background-color: #1f5f8c;
+  background-color: #141A4C;
+}
+
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #2c3e50;
+  color: #fff;
+  margin-top: 10px;
+  border-radius: 8px;
+  font-size: 0.95em;
 }
 
 @media (max-width: 1024px) {
-    .tabla-funciones {
-        width: 98%;
-    }
-    .exampletwo h1 {
-        font-size: 2em;
-    }
-    .formatcontact h2 {
-        font-size: 1.6em;
-        margin-left: 15px;
-    }
+  .tabla-container {
+    width: 90%;
+  }
+
+  .exampletwo h1 {
+    font-size: 2em;
+  }
+
+  .formatcontact h2 {
+    font-size: 1.6em;
+    margin-left: 15px;
+  }
 }
 
 @media (max-width: 768px) {
-    body {
-        font-size: 0.95em;
-    }
-    .tabla-funciones th, 
-    .tabla-funciones td {
-        padding: 10px;
-        font-size: 0.9em;
-    }
-    .tabla-funciones {
-        width: 100%;
-        box-shadow: none;
-    }
-    .formatcontact h2 {
-        text-align: center;
-        margin: 15px 0;
-    }
-    .backtohome {
-        text-align: center;
-        margin: 20px 0;
-    }
-    .backtohome a {
-        width: 80%;
-        text-align: center;
-    }
+  body {
+    font-size: 0.95em;
+  }
+
+  .tabla-container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .tabla-funciones th,
+  .tabla-funciones td {
+    padding: 10px;
+    font-size: 0.9em;
+  }
+
+  .formatcontact h2 {
+    text-align: center;
+    margin: 15px 0;
+  }
+
+  .backtohome {
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .backtohome a {
+    width: 80%;
+    text-align: center;
+  }
 }
 
 @media (max-width: 480px) {
-    .exampletwo h1 {
-        font-size: 1.6em;
-        padding: 15px 0;
-    }
-    .formatcontact h2 {
-        font-size: 1.3em;
-        margin: 10px 0;
-        text-align: center;
-    }
-    .tabla-funciones {
-        border-radius: 0;
-        box-shadow: none;
-        display: block;
-        overflow-x: auto;
-        white-space: nowrap;
-    }
-    .tabla-funciones th, 
-    .tabla-funciones td {
-        padding: 8px;
-        font-size: 0.85em;
-    }
-    .footer {
-        font-size: 0.9em;
-        padding: 15px;
-    }
-    .backtohome a {
-        font-size: 0.9em;
-        padding: 8px 15px;
-    }
+  .exampletwo h1 {
+    font-size: 1.6em;
+    padding: 15px 0;
+  }
+
+  .formatcontact h2 {
+    font-size: 1.3em;
+    margin: 10px 0;
+    text-align: center;
+  }
+
+  .tabla-container {
+    width: 95%;
+    padding: 15px;
+    box-shadow: none;
+  }
+
+  .tabla-funciones {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    font-size: 0.85em;
+  }
+
+  .tabla-funciones th,
+  .tabla-funciones td {
+    padding: 8px;
+  }
+
+  .footer {
+    font-size: 0.9em;
+    padding: 15px;
+  }
+
+  .backtohome a {
+    font-size: 0.9em;
+    padding: 8px 15px;
+  }
 }
