@@ -50,14 +50,17 @@ body {
 
 @media (max-width: 480px) {
   .menu {
-    flex-direction: column;
-    gap: 0.6em;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8em;
   }
 
   .menu a {
     font-size: 13px;
   }
 }
+
 
 .section-2 {
   padding: 20px;
@@ -188,6 +191,7 @@ video { width: 100%; max-width: 600px; }
         font-size: 1em;
     }
 }
+
 
 
 
