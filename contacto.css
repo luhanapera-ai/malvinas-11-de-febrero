@@ -25,19 +25,20 @@ body {
   color: #2D2D5C;
   margin: 20px 0;
 }
-
 .tabla-section {
+  width: 80%;
+  margin: 40px auto;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
   overflow-x: auto;
-  padding: 0 10px;
 }
 
 .tabla-contacto {
-  width: 105%;
-  margin: 25px auto;
+  width: 100%;
   border-collapse: collapse;
   background-color: #fff;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  border-radius: 8px;
 }
 
 .tabla-contacto th,
@@ -61,22 +62,6 @@ body {
   background-color: #e8f0fe;
 }
 
-.tabla-contacto img {
-  width: 22px;
-  height: 22px;
-  vertical-align: middle;
-  margin-right: 8px;
-}
-
-.tabla-contacto a {
-  color: #2D2D5C;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.tabla-contacto a:hover {
-  text-decoration: underline;
-}
 
 .form-container {
   width: 80%;
@@ -241,5 +226,6 @@ form input[type="submit"]:hover {
     padding: 10px;
   }
 }
+
 
 
